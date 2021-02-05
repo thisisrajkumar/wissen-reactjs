@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import ClassCom from './comTypes/ClassCom';
 import FunCom from './comTypes/FunCom';
+import EventHandling from './EventHandling';
 import HeaderCom from './header';
 import {
   BrowserRouter as Router,
@@ -16,11 +17,14 @@ function App() {
       <div className="App">
         <HeaderCom />
         <Switch>
+          <Route path="/eventHandling">
+            < EventHandling />
+          </Route>
           <Route path="/class">
             <ClassCom />
           </Route>
           <Route path="/fun">
-            < FunCom />
+            <FunCom />
           </Route>
           <Route path="/">
             <h1>React Learning</h1>
