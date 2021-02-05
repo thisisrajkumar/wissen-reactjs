@@ -1,18 +1,17 @@
-import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
+import {
+    Link
+} from "react-router-dom";
 const HeaderCom = () => {
     return (
         <div>
-            <Navbar bg="primary" variant="dark">
-                <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+            <Navbar bg="dark" variant="dark">
+                <Navbar.Brand href="/">Navbar</Navbar.Brand>
                 <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link>
+                    <Link to="/">Home</Link>
+                    <Link to="/class">ClassCom</Link>
+                    <Link to="/fun">FunctionalCom</Link>
                 </Nav>
-                <Form inline>
-                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                    <Button variant="outline-light">Search</Button>
-                </Form>
             </Navbar>
         </div>
     )
